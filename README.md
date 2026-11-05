@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-Mi CV online, hecho con **React** y **Vite**. Presenta mi perfil, habilidades, proyectos, experiencia, educación y certificados sobre un fondo de cielo estrellado animado.
+Mi CV online, hecho con **React** y **Vite**. Presenta mi perfil(hecho rápidamente y de forma incompleta, para practicar), habilidades, proyectos, experiencia, educación y certificados sobre un fondo de cielo estrellado animado.
 
 ## Vista previa
 
