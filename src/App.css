@@ -1,3 +1,9 @@
+/* ---------------------------------------------------
+   Base general del documento
+   Define el fondo de la página, el tipo de letra y el ancho
+   de la vista para que todo el CV se vea centrado y con un
+   aspecto profesional.
+--------------------------------------------------- */
 body {
   background: linear-gradient(to bottom right, #1e293b, #581c87, #1e293b);
   min-height: 100vh;
@@ -6,6 +12,11 @@ body {
   margin: 0;
 }
 
+/* ---------------------------------------------------
+   Contenedor principal del CV
+   Es la caja central que encierra todo el contenido y le da
+   forma de tarjeta con esquinas redondeadas y sombra.
+--------------------------------------------------- */
 .contenedor-principal {
   max-width: 1000px;
   margin: 0 auto;
@@ -15,6 +26,11 @@ body {
   overflow: hidden;
 }
 
+/* ---------------------------------------------------
+   Encabezado / cabecera del perfil
+   Aquí se da el estilo al bloque superior con degradado púrpura-azul,
+   letras blancas y centrado del contenido.
+--------------------------------------------------- */
 .header {
   background: linear-gradient(to right, #9333ea, #3b82f6);
   color: white;
@@ -42,6 +58,35 @@ body {
   margin: 10px 0;
 }
 
+/* ---------------------------------------------------
+   Contacto del encabezado
+   Ajusta la fila de textos de email, teléfono y ubicación para
+   que se vea bonita, centrada y con enlaces visibles.
+--------------------------------------------------- */
+.contacto {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.contacto a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contacto a:hover {
+  color: #e9d5ff;
+}
+
+/* ---------------------------------------------------
+   Secciones generales del contenido
+   Cada bloque del CV (sobre mí, experiencia, proyectos, etc.)
+   comparte el mismo estilo visual para dar consistencia.
+--------------------------------------------------- */
 .seccion {
   padding: 30px;
   margin: 20px;
@@ -56,6 +101,11 @@ body {
   margin-bottom: 15px;
 }
 
+/* ---------------------------------------------------
+   Habilidades
+   El contenedor flexible permite que cada habilidad aparezca en
+   chips con fondo degradado y borde morado.
+--------------------------------------------------- */
 .lista-habilidades {
   display: flex;
   flex-wrap: wrap;
@@ -71,6 +121,11 @@ body {
   color: #1f2937;
 }
 
+/* ---------------------------------------------------
+   Elementos de experiencia y educación
+   Este bloque representa cada entrada del historial, con una línea
+   vertical a la izquierda para distinguir visualmente cada item.
+--------------------------------------------------- */
 .item-experiencia {
   border-left: 4px solid #9333ea;
   padding-left: 20px;
