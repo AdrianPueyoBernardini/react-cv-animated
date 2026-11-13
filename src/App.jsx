@@ -1,6 +1,8 @@
 export default function App() {
   // Datos principales del CV para reutilizar tanto en el encabezado como en el enlace de correo.
   const email = 'adrianpueyo35@gmail.com';
+  const github = 'https://github.com/AdrianPueyoBernardini';
+  const linkedin = 'https://www.linkedin.com/in/adri%C3%A1n-pueyo-bernardini/';
   const telefono = '601334288';
   const ubicacion = 'Zaragoza';
 
@@ -24,9 +26,15 @@ export default function App() {
           <h1>Adrián Pueyo Bernardini</h1>
           <h2>Data & AI Trainee</h2>
           <p className="contacto">
-            <a href={`mailto:${email}?subject=Contacto%20desde%20CV`}>📧 {email}</a> |
-            <span> 📱 {telefono}</span> |
-            <span> 📍 {ubicacion}</span>
+            <a href={`mailto:${email}?subject=Contacto%20desde%20CV`}>
+              <img src="src/assets/gmail.png" alt="Gmail" className="icono" />   
+            </a>
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <img src="src/assets/github.png" alt="GitHub" className="icono" />   
+            </a>
+            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+              <img src="src/assets/linkedin.png" alt="LinkedIn" className="icono" />
+            </a>
           </p>
         </div>
       </div>

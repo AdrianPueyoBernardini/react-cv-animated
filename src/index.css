@@ -1,9 +1,19 @@
+/* ==========================================================
+   FONDO GENERAL DE LA PÁGINA
+   Se usa un degradado oscuro con tonos azul/violeta para crear
+   una apariencia espacial y elegante detrás del CV.
+   ========================================================== */
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #15011a 100%) fixed;
 }
 /* TODAS ANIMACIONES DE ESTRELLAS INCLUIDO EL PARALLAX VIENEN DE AQUI: https://codepen.io/sarazond/pen/LYGbwj */
 /* 0 Uso de IA */
+/* ==========================================================
+   CAPAS DE ESTRELLAS ANIMADAS
+   Se crean tres capas con box-shadow para simular un cielo lleno
+   de estrellas. Cada una tiene un tamaño y velocidad distintos.
+   ========================================================== */
 #stars, #stars2, #stars3 {
   position: fixed;
   top: 0;
@@ -63,6 +73,11 @@ html {
 
 
 
+/* ==========================================================
+   ANIMACIÓN DE MOVIMIENTO DE LAS ESTRELLAS
+   Hace que las estrellas se desplacen hacia arriba para dar la
+   sensación de profundidad y movimiento del fondo espacial.
+   ========================================================== */
 @keyframes animStar {
   from {
     transform: translateY(0px);
@@ -72,6 +87,10 @@ html {
   }
 }
 
+/* ==========================================================
+   ESTILOS BASE DEL DOCUMENTO
+   Aquí se define el cuerpo general, la tipografía y los márgenes.
+   ========================================================== */
 body {
   min-height: 100vh;
   padding: 20px;
@@ -79,6 +98,11 @@ body {
   margin: 0;
 }
 
+/* ==========================================================
+   CONTENEDOR PRINCIPAL DEL CURRÍCULUM
+   Es el bloque central donde se ubica todo el contenido del CV.
+   Tiene fondo blanco, borde redondeado y sombra para destacarlo.
+   ========================================================== */
 .contenedor-principal {
   max-width: 1500px;
   margin: 0 auto;
@@ -88,6 +112,11 @@ body {
   overflow: hidden;
 }
 
+/* ==========================================================
+   DISTRIBUCIÓN EN DOS COLUMNAS
+   La sección principal se divide en una columna izquierda y otra
+   derecha para organizar la información del perfil y la experiencia.
+   ========================================================== */
 .separador{
   display: flex;
   flex-direction: row;
@@ -100,6 +129,11 @@ body {
   flex: 2;
 }
 
+/* ==========================================================
+   ENCABEZADO PRINCIPAL
+   Este bloque representa el perfil del CV y usa un degradado
+   morado oscuro, con foto y datos personales alineados.
+   ========================================================== */
 .header{
   background: linear-gradient(135deg, #353449, #392052);
   color: white;
@@ -110,6 +144,11 @@ body {
   
 }
 
+/* ==========================================================
+   FOTO DE PERFIL
+   La imagen tiene forma circular y un efecto de giro al pasar el
+   mouse para añadir un pequeño detalle visual interactivo.
+   ========================================================== */
 .foto-perfil {
   width: 150px;
   height: 150px;
@@ -123,6 +162,11 @@ body {
 }
 
 
+/* ==========================================================
+   INFORMACIÓN DEL HEADER
+   Se organiza en columna para mostrar nombre, cargo y enlaces de
+   contacto de manera clara y legible.
+   ========================================================== */
 .informacion-header{
   padding-left: 200px;
   display: flex;
@@ -132,6 +176,37 @@ body {
   margin-left: 20px;
 }
 
+.informacion-header a{
+  text-decoration: none;
+  color: white;
+}
+.informacion-header a:hover {
+  text-decoration: none;
+  color: #bdaffa;
+}
+
+/* ==========================================================
+   ICONOS DE CONTACTO
+   Tamaño uniforme y separación lateral para que los íconos no
+   se vean pegados y queden bien alineados con el texto.
+   ========================================================== */
+.icono{
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.icono:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+
+}
+
+/* ==========================================================
+   TIPOGRAFÍA DEL HEADER
+   El nombre principal se resalta con un tamaño grande y el subtítulo
+   se mantiene más discreto para equilibrar la composición.
+   ========================================================== */
 .header h1 {
   font-size: 48px;
   margin: 10px 0;
@@ -145,6 +220,11 @@ body {
   margin: 10px 0;
 }
 
+/* ==========================================================
+   BLOQUES DE SECCIÓN
+   Cada sección del CV aparece como una tarjeta clara con sombra,
+   margen interno y redondeado para separar contenidos.
+   ========================================================== */
 .seccion {
   padding: 30px;
   margin: 20px;
@@ -158,6 +238,11 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* ==========================================================
+   TÍTULOS DE SECCIÓN
+   Son títulos principales con un tamaño legible y un tono oscuro
+   para contrastar sobre el fondo claro del contenido.
+   ========================================================== */
 .titulo-seccion {
   font-size: 24px;
   font-weight: bold;
@@ -165,6 +250,12 @@ body {
   margin-bottom: 15px;
 }
 
+
+/* ==========================================================
+   HABILIDADES
+   Las habilidades se muestran como etiquetas con fondo pastel y
+   borde morado, organizadas en filas flexibles.
+   ========================================================== */
 .lista-habilidades {
   display: flex;
   flex-wrap: wrap;
@@ -187,10 +278,20 @@ body {
   background: linear-gradient(to right, #dbeafe, #bdaffa);
 }
 
+/* ==========================================================
+   EXPERIENCIA LABORAL
+   Cada experiencia se distingue con una línea vertical morada,
+   lo que ayuda a leer visualmente la cronología del CV.
+   ========================================================== */
 .item-experiencia {
   border-left: 4px solid #9333ea;
   padding-left: 20px;
   margin-bottom: 20px;
+}
+.item-experiencia:hover {
+  background-color: #f3e8ff;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .item-experiencia h3 {
@@ -206,6 +307,11 @@ body {
   margin: 5px 0;
 }
 
+/* ==========================================================
+   ESTILOS DE ENLACES Y ETIQUETAS
+   Los enlaces mantienen la identidad morada del diseño y las
+   etiquetas de periodo se muestran como badges de fecha.
+   ========================================================== */
 a {
   color: #9333ea;
   margin: 5px 0;
