@@ -1,3 +1,7 @@
+import gmailIcon from './assets/gmail.png';
+import githubIcon from './assets/github.png';
+import linkedinIcon from './assets/linkedin.png';
+
 export default function App() {
   // Datos principales del CV para reutilizar tanto en el encabezado como en el enlace de correo.
   const email = 'adrianpueyo35@gmail.com';
@@ -27,13 +31,13 @@ export default function App() {
           <h2>Data & AI Trainee</h2>
           <p className="contacto">
             <a href={`mailto:${email}?subject=Contacto%20desde%20CV`}>
-              <img src="src/assets/gmail.png" alt="Gmail" className="icono" />   
+              <img src={gmailIcon} alt="Gmail" className="icono" />
             </a>
             <a href={github} target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/github.png" alt="GitHub" className="icono" />   
+              <img src={githubIcon} alt="GitHub" className="icono" />
             </a>
             <a href={linkedin} target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/linkedin.png" alt="LinkedIn" className="icono" />
+              <img src={linkedinIcon} alt="LinkedIn" className="icono" />
             </a>
           </p>
         </div>
